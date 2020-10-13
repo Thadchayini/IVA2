@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <title>Voice-Controlled Audio Player</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    
+    <style>
+      .collapse-content .fa.fa-heart:hover {
+  color: #f44336 !important;
+}
+.collapse-content .fa.fa-share-alt:hover {
+  color: #0d47a1 !important;
+}
+    </style>
+  </head>
+  <body>
+
+    
+
+    
+
+    <div id="spinner">
+      <img src="http://upload.wikimedia.org/wikipedia/commons/d/de/Ajax-loader.gif" alt="Loading">
+    </div>
+
+
+<!-- Card -->
+<div class="card promoting-card">
+
+  <!-- Card content -->
+  <div class="card-body d-flex flex-row">
+
+    
+
+    <!-- Content -->
+    <div>
+
+      <h2 class="well text-center well-sm"><label id="lblGreetings"></label></h2>
+
+    </div>
+
+  </div>
+
+  
+
+  <!-- Card content -->
+  <div class="card-body">
+
+    <div class="collapse-content">
+
+      <div class="col-md-12">
+        <p class="lead text-center">We offer you the following Services in Jaffna Municipal Council:</p>
+        <ul class="list-group" id="playlist" style="text-align: center;"></ul>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+<!-- Card -->
+
+    <script>
+      var myDate = new Date();
+      var hrs = myDate.getHours();
+    
+      var greet;
+    
+      if (hrs < 12)
+          greet = 'Good Morning';
+      else if (hrs >= 12 && hrs <= 17)
+          greet = 'Good Afternoon';
+      else if (hrs >= 17 && hrs <= 24)
+          greet = 'Good Evening';
+    
+      document.getElementById('lblGreetings').innerHTML =
+          '<b>' + greet + '</b> and welcome to Jaffna Municipal Council!';
+    </script> 
+
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="js/playlist.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
+
+
+
+
+
